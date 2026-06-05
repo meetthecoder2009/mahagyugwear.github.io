@@ -1,0 +1,229 @@
+/* Premium Green & Gold Theme */
+:root {
+    --primary-dark: #0B2516; /* Deep Emerald Green */
+    --accent-gold: #D4AF37;  /* Classic Metallic Gold */
+    --light-gold: #F4E8C1;   /* Soft Background Accent */
+    --text-dark: #1C1C1C;
+    --text-light: #FFFFFF;
+    --bg-light: #F9F9F6;
+    --card-bg: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', 'Didot', 'Georgia', serif;
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--accent-gold);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+}
+
+.logo a {
+    color: var(--accent-gold);
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--accent-gold);
+}
+
+.nav-icons {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.nav-icons i:hover {
+    color: var(--accent-gold);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(11, 37, 22, 0.6), rgba(11, 37, 22, 0.8)), url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1600&auto=format&fit=crop') center/cover;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-light);
+    text-align: center;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: var(--light-gold);
+    margin-bottom: 2rem;
+}
+
+.btn-gold {
+    background-color: var(--accent-gold);
+    color: var(--primary-dark);
+    padding: 0.8rem 2.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background 0.3s;
+}
+
+.btn-gold:hover {
+    background-color: #bfa030;
+    color: var(--text-light);
+}
+
+/* Product Grid Layout */
+.page-title {
+    text-align: center;
+    margin: 3rem 0 1rem 0;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.page-subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 3rem;
+}
+
+.product-grid {
+    max-width: 1200px;
+    margin: 0 auto 5rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+    padding: 0 2rem;
+}
+
+.product-card {
+    background-color: var(--card-bg);
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.product-image {
+    width: 100%;
+    height: 350px;
+    background-color: #eee;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.product-brand {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+.product-name {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.product-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-dark);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-dark);
+    color: var(--text-light);
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-top: auto;
+    border-top: 4px solid var(--accent-gold);
+}
+
+footer p {
+    color: var(--light-gold);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .nav-links {
+        gap: 1rem;
+        font-size: 0.8rem;
+    }
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+}
